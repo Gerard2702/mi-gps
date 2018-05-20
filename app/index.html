@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MY GPS TRACKING</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">  
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="mi-menu">
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-body">
+                            <p>Agregar Dispotivos</p>
+                            <form id="form-add" autocomplete="off">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name"  placeholder="Nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="identifier" placeholder="Identificador" required>
+                                </div>
+                                <button type="submit" class="btn btn-block btn-danger">Agregar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-body">
+                            <p>Dispositivos Agregados</p>
+                            <div class="table-responsive table-devices">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="tetx-left">Nombre</th>
+                                            <th class="tetx-left">ID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="misdevices">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="mi-mapa">
+                    <div id="map">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAod1WzXI5Tn_ca0oaR818cvokNj8xBpPQ"
+    async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
+    <script src="assets/js/main.js"></script>       
+</body>
+</html>
